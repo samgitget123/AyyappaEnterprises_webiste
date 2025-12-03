@@ -1,0 +1,84 @@
+/* Global css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  /* font-family: 'Segoe UI', sans-serif; */
+  /* font-family: 'Tinos', serif; */
+   font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+/* h1, h2, h3, .logo-title {
+  font-family: 'Montserrat', sans-serif;
+} */
+ /* Headings */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+/* Buttons & Navbar */
+button, .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+/* Ensure content under fixed-top navbar is visible */
+
+body {
+  padding-top: 70px;
+   
+}
+
+/*********Gallery section css for animation scrolling************/
+/* Smooth zoom effect on carousel images */
+.gallery-slide {
+  overflow: hidden;
+}
+
+.gallery-img {
+  height: 250px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 1.5s ease-in-out;
+}
+
+.carousel-item.active .gallery-img {
+  transform: scale(1.05);
+}
+
+/* Fade-in caption effect */
+.carousel-caption p {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
